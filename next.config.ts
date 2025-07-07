@@ -2,6 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   // Aquí irá la configuración de tu proyecto de Next.js
+  devIndicators: false, // Desactiva los indicadores de desarrollo
 
   // Añadimos cabeceras de seguridad personalizadas
   async headers() {

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {FaInstagram, FaDiscord, FaTruck, FaTruckMoving, FaGlobe } from 'react-icons/fa';
+import {FaTwitter, FaInstagram, FaDiscord, FaTruck, FaTruckMoving, FaGlobe } from 'react-icons/fa';
 
 const Footer = () => {
   const quickLinks = [

@@ -50,7 +50,7 @@ export default function Home() {
                   inline-block rounded-lg px-8 py-4
                   text-lg font-semibold text-white
                   shadow-lg transition-all duration-300
-                  bg-gradient-to-r from-[#369876] to-[#71ff9e]
+                  bg-gradient-to-r from-[#369876] to-[#16E884]
                   hover:shadow-2xl hover:brightness-110
                 "
               >

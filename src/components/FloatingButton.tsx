@@ -34,7 +34,7 @@ const FloatingButton = () => {
         {/* El botón circular en sí. */}
         <motion.div
           // === CAMBIO AQUÍ: Se reemplazó el color de fondo por un degradado diagonal ===
-          className="w-14 h-14 bg-gradient-to-br from-[#369876] to-[#71ff9e] rounded-full flex items-center justify-center cursor-pointer shadow-lg"
+          className="w-14 h-14 bg-gradient-to-br from-[#369876] to-[#16E884] rounded-full flex items-center justify-center cursor-pointer shadow-lg"
           // Animación de Framer Motion: agranda el botón al pasar el cursor.
           whileHover={{ scale: 1.1 }}
           // Define la física de la animación para un efecto de "resorte".

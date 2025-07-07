@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Paleta de colores */
+  --accent-primary: #16E884;
+  --background-main: #1C1C1C;
+  --surface-dark: #10594F;
+  --accent-muted: #3A4F41;
+  --background-contrast: #2e2c2c;
+
+  /* Colores para el texto */
+  --text-primary: #EDEDED; /* Usando el color claro de tu configuración original para el texto principal */
+  --text-secondary: #A0A0A0; /* Un gris más claro para el texto secundario para mejor legibilidad */
+
+  /* Mapeo a las variables que Tailwind y el layout esperan */
+  --background: var(--background-main);
+  --foreground: var(--text-primary);
 }
 
 @theme inline {

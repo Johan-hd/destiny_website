@@ -33,8 +33,8 @@ const FloatingButton = () => {
         
         {/* El botón circular en sí. */}
         <motion.div
-          // Clases de Tailwind para dar estilo, tamaño y forma al botón.
-          className="w-13 h-13 bg-[var(--accent-primary)] rounded-full flex items-center justify-center cursor-pointer shadow-lg"
+          // === CAMBIO AQUÍ: Se reemplazó el color de fondo por un degradado diagonal ===
+          className="w-14 h-14 bg-gradient-to-br from-[#369876] to-[#71ff9e] rounded-full flex items-center justify-center cursor-pointer shadow-lg"
           // Animación de Framer Motion: agranda el botón al pasar el cursor.
           whileHover={{ scale: 1.1 }}
           // Define la física de la animación para un efecto de "resorte".
@@ -46,7 +46,7 @@ const FloatingButton = () => {
             animate={{ rotate: isHovered ? -30 : 0 }} 
             transition={{ duration: 0.3 }} // La animación de rotación dura 0.3 segundos.
           >
-            <GiSteeringWheel size={28} className="text-[var(--background-main)]" />
+            <GiSteeringWheel size={28} className="text-white" />
           </motion.div>
         </motion.div>
 

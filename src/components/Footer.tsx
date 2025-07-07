@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebook, FaTwitter, FaInstagram, FaDiscord } from 'react-icons/fa';
+import {FaInstagram, FaDiscord, FaTruck, FaTruckMoving, FaGlobe } from 'react-icons/fa';
 
 const Footer = () => {
   const quickLinks = [
@@ -10,10 +10,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaFacebook />, href: 'https://facebook.com', name: 'Facebook' },
-    { icon: <FaTwitter />, href: 'https://twitter.com', name: 'Twitter' },
+    { icon: <FaTruckMoving />, href: 'https://truckersmp.com/vtc/55439', name: 'TruckersMP' },
     { icon: <FaInstagram />, href: 'https://instagram.com', name: 'Instagram' },
-    { icon: <FaDiscord />, href: 'https://discord.com', name: 'Discord' },
+    { icon: <FaDiscord />, href: 'https://discord.gg/SXaRtj8dXS', name: 'Discord' },
+    { icon: <FaGlobe />, href: 'https://trucksbook.eu/company/154745', name: 'TrucksBook' }
   ];
 
   return (

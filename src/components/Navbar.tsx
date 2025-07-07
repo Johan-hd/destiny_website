@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full p-4 sticky top-0 z-50 transition-colors duration-300 ${
+      className={`w-full p-4 sticky top-0 z-50 transition-colors duration-700 ${
         isScrolled ? 'bg-[var(--background-contrast)] shadow-lg' : 'bg-transparent'
       }`}
     >

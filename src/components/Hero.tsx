@@ -18,11 +18,8 @@ const Hero = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
 
   return (
-    // === CAMBIOS AQUÍ ===
-    // 1. Posicionamos de forma absoluta para que no ocupe espacio en el flujo del documento.
-    // 2. 'inset-0' hace que ocupe toda la pantalla.
-    // 3. '-z-10' lo envía detrás de todo el resto del contenido.
-    <div className="absolute inset-0 -z-10 overflow-hidden h-screen" ref={emblaRef}>
+    // Aseguramos que sea 'absolute' y que ocupe el 100% de su contenedor padre
+    <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden" ref={emblaRef}>
       <div className="flex h-full">
         {images.map((src, index) => (
           <div className="relative flex-[0_0_100%] h-full" key={index}>

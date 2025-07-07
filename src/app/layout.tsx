@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar"; // La quitamos de aquí
 import Footer from "@/components/Footer";
 import FloatingButton from "@/components/FloatingButton";
 
@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Destiny VTC",
-  description: "Destiny is your destination for a seamless VTC experience.",
+  description: "Your Virtual Trucking Company",
 };
 
 export default function RootLayout({
@@ -28,12 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <Navbar />{/* Navbar component for site navigation */}
-        <main>{children}</main>
-        <Footer />{/* Footer component for site information */}
-        <FloatingButton /> {/* 2. Añade el botón aquí */}
+        {/* <Navbar /> La hemos quitado de aquí */}
+        <main className="flex-grow">{children}</main>
+        <Footer />
+        <FloatingButton />
       </body>
     </html>
   );

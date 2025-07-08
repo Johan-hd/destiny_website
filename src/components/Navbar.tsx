@@ -43,7 +43,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { 
-      name: 'Company', 
+      name: 'More', 
       // Si un enlace tiene la propiedad 'dropdown', se tratará como un menú desplegable.
       dropdown: [
         { name: 'Contact Us', href: '/company/contact' },
@@ -59,7 +59,7 @@ const Navbar = () => {
     // Etiqueta del encabezado. Es 'sticky' para que se mantenga fija en la parte superior.
     <header
       // Clases de CSS que cambian dinámicamente según el estado 'isScrolled'.
-      className={`w-full p-4 sticky top-0 z-50 transition-colors duration-700 ${
+      className={`w-full p-4 fixed top-0 z-50 transition-colors duration-700 ${
         isScrolled ? 'bg-[var(--background-contrast)] shadow-lg' : 'bg-transparent'
       }`}
     >

@@ -3,17 +3,15 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
-// 1. Importamos los nuevos íconos para las ventajas
 import { 
-  FaLandmark, FaDiscord, FaGlobe, FaSearch, FaUserFriends,
-  FaTachometerAlt, FaImage, FaCogs, FaPaintBrush, FaHandshake 
+  FaLandmark, FaDiscord, FaGlobe, FaSearch, 
+  FaTachometerAlt, FaImage, FaCogs, FaPaintBrush, FaHandshake, FaUserFriends 
 } from 'react-icons/fa';
 import InfoCard from "@/components/InfoCard";
 
 export default function Home() {
   const discordInviteLink = 'https://discord.com/invite/SXaRtj8dXS';
 
-  // 2. Creamos un array con la información de las ventajas para mantener el código limpio
   const advantages = [
     {
       icon: <FaTachometerAlt />,
@@ -119,8 +117,9 @@ export default function Home() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
+              {/* === 1. CAMBIAMOS EL ENLACE AQUÍ === */}
               <a
-                href="#explore-destiny"
+                href="#our-advantages"
                 className="inline-block rounded-lg px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-[#369876] to-[#71ff9e] hover:shadow-2xl hover:brightness-110"
               >
                 Explore Destiny
@@ -130,16 +129,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* === NUEVA SECCIÓN: VENTAJAS === */}
-      <section className="relative bg-[var(--background-contrast)] py-20">
+      {/* SECCIÓN 3: VENTAJAS */}
+      {/* === 2. AÑADIMOS EL ID A ESTA SECCIÓN === */}
+      <section id="our-advantages" className="relative bg-[var(--background-contrast)] py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-2">Our Advantages</h2>
           <p className="text-lg text-gray-400 mb-12">What makes us the best choice for your journey.</p>
           
-          {/* Contenedor de la cuadrícula de tarjetas */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {advantages.map((advantage, index) => (
-              // 3. Tarjeta individual con animación
               <motion.div
                 key={index}
                 className="bg-[var(--background-main)] p-8 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"

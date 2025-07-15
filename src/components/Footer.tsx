@@ -14,7 +14,7 @@ const Footer = () => {
   // Array de objetos que define los íconos y enlaces a las redes sociales y plataformas externas.
   const socialLinks = [
     { icon: <FaTruckMoving />, href: 'https://truckersmp.com/vtc/55439', name: 'TruckersMP' },
-    { icon: <FaInstagram />, href: 'https://instagram.com', name: 'Instagram' },
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/destiny_vtc', name: 'Instagram' },
     { icon: <FaDiscord />, href: 'https://discord.gg/SXaRtj8dXS', name: 'Discord' },
     { icon: <FaGlobe />, href: 'https://trucksbook.eu/company/154745', name: 'TrucksBook' }
   ];

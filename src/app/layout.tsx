@@ -21,6 +21,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Destiny VTC",
   description: "Your Virtual Trucking Company",
+  icons: {
+    icon: "/logo_green.svg", // Ruta al icono de la aplicación.
+  },
 };
 
 // 'RootLayout' es el componente principal que envuelve toda la aplicación.

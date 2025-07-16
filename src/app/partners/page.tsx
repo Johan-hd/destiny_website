@@ -1,3 +1,5 @@
+// partners.tsx - ACTUALIZADO CON VARIANTS
+
 'use client';
 
 import Navbar from "@/components/Navbar";
@@ -5,9 +7,8 @@ import Image from "next/image";
 import { FaQuoteLeft, FaHandshake } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// === CAMBIO 1: Añadimos 'truckersMP_url' a cada partner ===
-// DEBES REEMPLAZAR LOS ENLACES "#" CON LAS URLS REALES DE TRUCKERSMP
 const partnersData = [
+  // ... (los datos de los partners no cambian)
   {
     name: "Truck Convoy Control and Route",
     logoSrc: "/logos/tccr.png",
@@ -73,6 +74,23 @@ const partnersData = [
   },
 ];
 
+// === INICIO DEL CAMBIO: Definimos las variantes para la animación ===
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // Aplica un retraso entre la animación de cada hijo
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+// === FIN DEL CAMBIO ===
+
 export default function PartnersPage() {
   return (
     <>
@@ -89,33 +107,33 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <div className="bg-[var(--background-main)]">
+      {/* === INICIO DEL CAMBIO: Aplicamos las variantes al contenedor de la lista === */}
+      <motion.div 
+        className="bg-[var(--background-main)]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible" // Usamos animate para que se active al cargar
+      >
         {partnersData.map((partner, index) => (
-          <section key={partner.name} className={index % 2 === 0 ? 'bg-[var(--background-main)]' : 'bg-[var(--background-contrast)]'}>
+          // Ahora cada 'section' es un item de la animación
+          <motion.section 
+            key={partner.name} 
+            className={index % 2 === 0 ? 'bg-[var(--background-main)]' : 'bg-[var(--background-contrast)]'}
+            variants={itemVariants} // Cada hijo usa la variante 'item'
+          >
+            {/* El contenido interno ya no necesita sus propios `motion.div` */}
             <div className="container mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
-              
-              <motion.div 
-                className={`relative w-full h-100 rounded-lg overflow-hidden shadow-lg ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.8 }}
-              >
+              <div className={`relative w-full h-100 rounded-lg overflow-hidden shadow-lg ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                 <Image 
                   src={partner.truckImageSrc}
                   alt={`${partner.name} truck`}
                   fill
                   className="object-cover"
                 />
-              </motion.div>
+              </div>
 
-              <motion.div 
-                className={`flex flex-col gap-6 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}
-                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.8 }}
-              >
+              <div className={`flex flex-col gap-6 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
+                {/* ... El resto del contenido de la tarjeta va aquí ... */}
                 <a 
                   href={partner.truckersMP_url} 
                   target="_blank" 
@@ -145,11 +163,12 @@ export default function PartnersPage() {
                     <cite className="block mt-2 text-sm not-italic">- A word from Destiny VTC</cite>
                   </blockquote>
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </section>
+          </motion.section>
         ))}
-      </div>
+      </motion.div>
+      {/* === FIN DEL CAMBIO === */}
     </>
   );
 }

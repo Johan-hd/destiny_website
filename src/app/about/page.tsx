@@ -1,3 +1,5 @@
+// about.tsx - CORREGIDO CON TODO EL CONTENIDO RESTAURADO
+
 'use client';
 
 import Navbar from "@/components/Navbar";
@@ -9,7 +11,7 @@ export default function AboutUsPage() {
     <>
       <Navbar />
       
-      {/* SECCIÓN 1: BANNER PRINCIPAL (Sin cambios) */}
+      {/* SECCIÓN 1: BANNER PRINCIPAL */}
       <section 
         className="relative py-32 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/truck_about.png')" }}
@@ -22,14 +24,13 @@ export default function AboutUsPage() {
       </section>
 
       {/* SECCIÓN 2: NUESTRA HISTORIA */}
-      {/* === CAMBIO 1: Reducimos el padding inferior para acercar las secciones === */}
       <section className="bg-[var(--background-main)] pt-20 pb-5">
         <div className="container mx-auto px-4 max-w-4xl text-gray-300 text-lg leading-relaxed">
           
+          {/* Este primer bloque usa `animate` para solucionar el bug de carga */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -40,10 +41,11 @@ export default function AboutUsPage() {
             </p>
           </motion.div>
           
+          {/* Los siguientes bloques usan `whileInView` para aparecer con el scroll */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
@@ -56,7 +58,7 @@ export default function AboutUsPage() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-12"
           >
@@ -70,7 +72,6 @@ export default function AboutUsPage() {
       </section>
 
       {/* SECCIÓN 3: MISIÓN Y VISIÓN */}
-      {/* === CAMBIO 2: Mismo fondo y menos padding superior === */}
       <section className="bg-[var(--background-main)] pt-5 pb-20">
         <div className="container mx-auto px-4 flex flex-col items-center gap-12 md:max-w-3xl">
 
@@ -78,9 +79,9 @@ export default function AboutUsPage() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="bg-[var(--background-contrast)] p-8 rounded-lg w-full" // Mantenemos el contraste aquí para las tarjetas
+            className="bg-[var(--background-contrast)] p-8 rounded-lg w-full"
           >
             <div className="flex items-center gap-4 mb-4">
               <FaBullseye className="text-4xl text-[var(--accent-primary)]" />
@@ -95,9 +96,9 @@ export default function AboutUsPage() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-[var(--background-contrast)] p-8 rounded-lg w-full" // Mantenemos el contraste aquí para las tarjetas
+            className="bg-[var(--background-contrast)] p-8 rounded-lg w-full"
           >
             <div className="flex items-center gap-4 mb-4">
               <FaEye className="text-4xl text-[var(--accent-primary)]" />

@@ -7,7 +7,7 @@ const Footer = () => {
   // Array de objetos que define los enlaces rápidos que se mostrarán en la tercera columna.
   const quickLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/what-we-offer' },
+    { name: 'About Us', href: '/about' },
     // Se añade la propiedad 'external: true' para identificarlo como enlace externo.
     { name: 'Contact Us', href: 'https://discord.gg/SXaRtj8dXS', external: true }, // <-- Modificado
     { name: 'Terms & Conditions', href: '/terms-and-conditions' },

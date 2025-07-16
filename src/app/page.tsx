@@ -135,6 +135,24 @@ export default function Home() {
               ))}
             </div>
           </div>
+           <motion.div
+            className="mt-12"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <a
+              href="/partners" // Enlace a la nueva página de partners
+              className="
+                inline-block rounded-lg px-8 py-4
+                text-lg font-semibold text-white
+                shadow-lg transition-all duration-300
+                bg-gradient-to-r from-[#369876] to-[#71ff9e]
+                hover:shadow-2xl hover:brightness-110
+              "
+            >
+              Meet All Our Partners
+            </a>
+          </motion.div>
         </div>
       </section>
       {/* SECCIÓN 5: ÚNETE A NOSOTROS */}

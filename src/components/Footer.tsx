@@ -8,7 +8,10 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/what-we-offer' },
-    { name: 'Contact Us', href: '/be-part' }
+    // Se añade la propiedad 'external: true' para identificarlo como enlace externo.
+    { name: 'Contact Us', href: 'https://discord.gg/SXaRtj8dXS', external: true }, // <-- Modificado
+    { name: 'Terms & Conditions', href: '/terms-and-conditions' },
+    { name: 'Privacy Policy', href: '/privacy-policy' }
   ];
 
   // Array de objetos que define los íconos y enlaces a las redes sociales y plataformas externas.
@@ -60,7 +63,13 @@ const Footer = () => {
               {/* Itera sobre 'quickLinks' para crear cada enlace. */}
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors">
+                  <Link 
+                    href={link.href} 
+                    className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors"
+                    // Añadimos los atributos target y rel SÓLO si el enlace es externo
+                    target={link.external ? '_blank' : '_self'} // <-- Modificado
+                    rel={link.external ? 'noopener noreferrer' : ''} // <-- Modificado
+                  >
                     {link.name}
                   </Link>
                 </li>

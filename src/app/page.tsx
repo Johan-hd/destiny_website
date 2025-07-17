@@ -42,6 +42,7 @@ export default function Home() {
     {
       icon: <FaUserFriends />,
       title: "An amazing community",
+      // === CAMBIO AQUÍ ===
       description: "Eventhough we are a trucking company, our drivers and staff become friends to play other games together, not only ETS2 or ATS."
     }
   ];
@@ -117,11 +118,9 @@ export default function Home() {
       <section className="relative bg-[var(--background-main)] py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-12">Our Partners</h2>
-          
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] group">
             <div className="flex w-max animate-[scroll_45s_linear_infinite] group-hover:pause">
               {[...partners, ...partners].map((partner, index) => (
-                // === CAMBIOS AQUÍ: Aumentamos el tamaño y espaciado de cada partner ===
                 <a href={partner.href} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center justify-center w-50 mx-12 transition-transform duration-300 hover:!scale-110">
                   <Image 
                     src={partner.logoSrc} 
@@ -135,13 +134,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-           <motion.div
+          <motion.div
             className="mt-12"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <a
-              href="/partners" // Enlace a la nueva página de partners
+              href="/partners"
               className="
                 inline-block rounded-lg px-8 py-4
                 text-lg font-semibold text-white
@@ -158,15 +157,13 @@ export default function Home() {
       {/* SECCIÓN 5: ÚNETE A NOSOTROS */}
       <section 
         className="relative bg-cover bg-center bg-fixed py-24"
-        style={{ backgroundImage: "url('/images/convoy.png')" }} // 1. Asegúrate de tener esta imagen en /public/images
+        style={{ backgroundImage: "url('/images/convoy.png')" }}
       >
-        {/* Overlay oscuro para la legibilidad */}
         <div className="absolute inset-0 bg-black/60"></div>
-
         <div className="relative container mx-auto px-4 text-center text-white z-10 flex flex-col items-center">
           <h2 className="text-5xl font-bold">Join Our Ranks</h2>
           <p className="mt-4 max-w-2xl text-lg text-gray-300">
-            Your journey at Destiny begins as a driver, but it doesn't have to end there. We value dedication and passion, offering opportunities to grow and take on staff positions to help shape the future of our VTC.
+            Your journey at Destiny begins as a driver, but it doesn&apos;t have to end there. We value dedication and passion, offering opportunities to grow and take on staff positions to help shape the future of our VTC.
           </p>
           <motion.div
             className="mt-8"

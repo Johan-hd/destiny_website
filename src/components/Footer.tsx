@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {FaTwitter, FaInstagram, FaDiscord, FaTruck, FaTruckMoving, FaGlobe } from 'react-icons/fa';
+import {FaInstagram, FaDiscord, FaTruckMoving, FaGlobe } from 'react-icons/fa';
 
 // Definición del componente funcional Footer.
 const Footer = () => {

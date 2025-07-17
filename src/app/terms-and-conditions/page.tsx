@@ -38,7 +38,7 @@ const TermsAndConditionsPage = () => {
               <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
           </ul>
           <p>
-            These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.
+            These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party&apos;s site.
           </p>
           <p>We may consider and approve other link requests from the following types of organizations:</p>
           <ul className="list-disc list-inside space-y-2 pl-4">
@@ -60,10 +60,10 @@ const TermsAndConditionsPage = () => {
           <ul className="list-disc list-inside space-y-2 pl-4">
               <li>By use of our corporate name; or</li>
               <li>By use of the uniform resource locator being linked to; or</li>
-              <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.</li>
+              <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party&apos;s site.</li>
           </ul>
           <p>
-              No use of Destiny VTC's logo or other artwork will be allowed for linking absent a trademark license agreement.
+              No use of Destiny VTC&apos;s logo or other artwork will be allowed for linking absent a trademark license agreement.
           </p>
 
           <h2 className="text-2xl font-bold pt-4 text-[var(--text-primary)]">Content Liability:</h2>
@@ -73,7 +73,7 @@ const TermsAndConditionsPage = () => {
 
           <h2 className="text-2xl font-bold pt-4 text-[var(--text-primary)]">Reservation of Rights:</h2>
           <p>
-            We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it's linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
+            We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it&apos;s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
           </p>
 
           <h2 className="text-2xl font-bold pt-4 text-[var(--text-primary)]">Removal of links from our website:</h2>
